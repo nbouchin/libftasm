@@ -5,6 +5,7 @@
 
 extern void	ft_bzero(void *s, size_t n);
 extern char *ft_strcat(char *s1, const char *s2);
+extern int ft_isalpha(int c);
 
 int main(void)
 {
@@ -32,5 +33,7 @@ int main(void)
 	printf("BEFORE strcat: %s : %s\n", s1, s2);
 	s1 = ft_strcat(s1, s2);
 	printf("AFTER strcat: %s : %s\n", s1, s2);
+
+	printf("%d\n", ft_isalpha('c'));
 	return (0);
 }
