@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 extern void	ft_bzero(void *s, size_t n);
 extern char *ft_strcat(char *s1, const char *s2);
@@ -27,9 +28,9 @@ int main(void)
 	s1 = (char *)malloc(sizeof(char) * 20);
 	s2 = (char *)malloc(sizeof(char) * 20);
 	s1 = strcpy(s1, "coucou je s");
-	printf("BEFORE strcat: %s : %s\n", s1, s2);
 	s2 = strcpy(s2, "uis con");
-	s1 = strcat(s1, s2);
+	printf("BEFORE strcat: %s : %s\n", s1, s2);
+	s1 = ft_strcat(s1, s2);
 	printf("AFTER strcat: %s : %s\n", s1, s2);
 	return (0);
 }
