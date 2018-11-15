@@ -11,5 +11,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	ft_puts(char *s);
+int		ft_strlen(char *s);
 
 #endif

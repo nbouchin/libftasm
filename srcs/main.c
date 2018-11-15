@@ -121,5 +121,17 @@ int main(void)
 		}
 	}
 	printf("\n\n");
+
+	printf("STRLEN TEST:\n");
+	{
+		printf("%s: %d\n", "CCOUCOU JE SUIS CON", ft_strlen("CCOUCOU JE SUIS CON"));
+	}
+
+	printf("PUTS TEST:\n");
+	{
+		ft_puts("COUCOU je SuSIS u23423151245 ");
+	}
+
+	printf("\n\n");
 	return (0);
 }
