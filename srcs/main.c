@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
+#include <ctype.h>
 
 int main(void)
 {
@@ -94,6 +95,28 @@ int main(void)
 		while (i++ < 127)
 		{
 			printf("%c : %d\t", i, ft_isprint(i));
+			(i % 10 == 0) ? printf("\n") : 0;
+		}
+	}
+	printf("\n\n");
+
+	printf("TOUPPER TEST:\n");
+	{
+		i = 0;
+		while (i++ < 127)
+		{
+			printf("%c : %c\t", i, ft_toupper(i));
+			(i % 10 == 0) ? printf("\n") : 0;
+		}
+	}
+	printf("\n\n");
+
+	printf("TOLOWER TEST:\n");
+	{
+		i = 0;
+		while (i++ < 127)
+		{
+			printf("%c : %c\t", i, ft_tolower(i));
 			(i % 10 == 0) ? printf("\n") : 0;
 		}
 	}
