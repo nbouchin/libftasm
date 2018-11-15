@@ -77,12 +77,23 @@ int main(void)
 	}
 	printf("\n\n");
 
-	printf("ISALPHANUM TEST:\n");
+	printf("ISASCII TEST:\n");
 	{
 		i = 0;
 		while (i++ < 127)
 		{
 			printf("%c : %d\t", i, ft_isascii(i));
+			(i % 10 == 0) ? printf("\n") : 0;
+		}
+	}
+	printf("\n\n");
+
+	printf("ISPRINTTEST:\n");
+	{
+		i = 0;
+		while (i++ < 127)
+		{
+			printf("%c : %d\t", i, ft_isprint(i));
 			(i % 10 == 0) ? printf("\n") : 0;
 		}
 	}
