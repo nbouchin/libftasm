@@ -3,7 +3,7 @@
 %define WRITE				4
 
 section .data
-		null		db "(null)"
+		null		db "(null)", 10
 		len			equ $ - null
 		new_line	db 10
 
@@ -33,11 +33,6 @@ _null:
 		mov rdi, STDOUT					; put STDOUT define into third register
 		mov rdx, len					; put ft_strlen ret in rdx third parameter register
 		mov rsi, null					; get the rbx previous saved register into rsi seccond register
-		mov rax, MACH_SYSCALL(WRITE)	; move WRITE syscall into return register
-		syscall							; call write syscall
-		mov rdi, STDOUT
-		mov rdx, 1
-		mov rsi, new_line
 		mov rax, MACH_SYSCALL(WRITE)	; move WRITE syscall into return register
 		syscall							; call write syscall
 		ret
