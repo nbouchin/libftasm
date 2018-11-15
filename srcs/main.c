@@ -11,8 +11,8 @@ int main(void)
 
 	// FT_BZERO TEST
 	printf("FT_BZERO: \n");
-	i = 0;
 	{
+		i = 0;
 		s1 = (char *)malloc(sizeof(char) * 20);
 		s1 = strcpy(s1, "coucou jes");
 		printf("BEFORE BZERO:\n\n");
@@ -37,6 +37,8 @@ int main(void)
 		printf("BEFORE strcat: %s : %s\n", s1, s2);
 		s1 = ft_strcat(s1, s2);
 		printf("AFTER strcat: %s : %s\n", s1, s2);
+		free(s1);
+		free(s2);
 	}
 	printf("\n");
 
