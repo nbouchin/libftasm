@@ -23,7 +23,8 @@ SRC		=	ft_bzero.s \
 			ft_strcat.s \
 			ft_isalpha.s \
 			ft_isdigit.s \
-			ft_isalnum.s
+			ft_isalnum.s \
+			ft_isascii.s
 
 TSRC	=	main.c
 

@@ -64,6 +64,28 @@ int main(void)
 			(i % 10 == 0) ? printf("\n") : 0;
 		}
 	}
-	printf("\n");
+	printf("\n\n");
+
+	printf("ISALPHANUM TEST:\n");
+	{
+		i = 0;
+		while (i++ < 127)
+		{
+			printf("%c : %d\t", i, ft_isalnum(i));
+			(i % 10 == 0) ? printf("\n") : 0;
+		}
+	}
+	printf("\n\n");
+
+	printf("ISALPHANUM TEST:\n");
+	{
+		i = 0;
+		while (i++ < 127)
+		{
+			printf("%c : %d\t", i, ft_isascii(i));
+			(i % 10 == 0) ? printf("\n") : 0;
+		}
+	}
+	printf("\n\n");
 	return (0);
 }
