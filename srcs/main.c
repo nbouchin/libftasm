@@ -129,9 +129,10 @@ int main(void)
 
 	printf("PUTS TEST:\n");
 	{
-		ft_puts("COUCOU je SuSIS u23423151245 ");
+		ft_puts("COUCOU je SuSIS u23423151245");
+		ft_puts(NULL);
 	}
 
-	printf("\n\n");
+	//printf("\n\n");
 	return (0);
 }
