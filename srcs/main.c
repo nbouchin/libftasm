@@ -125,6 +125,7 @@ int main(void)
 	printf("STRLEN TEST:\n");
 	{
 		printf("%s: %d\n", "CCOUCOU JE SUIS CON", ft_strlen("CCOUCOU JE SUIS CON"));
+		printf("%s: %d\n", "ZERO STRING", ft_strlen(""));
 	}
 
 	printf("PUTS TEST:\n");
@@ -133,6 +134,18 @@ int main(void)
 		ft_puts(NULL);
 	}
 
+	printf("MEMSET TEST:\n");
+	{
+		char *str;
+
+		str = (char *)malloc(sizeof(char) * 5);
+		str = strcpy(str, "SALUT");
+		str = ft_memset(str, 6, 5);
+		i = 0;
+		while (i < 5)
+			printf("%x\n", str[i++]);
+		free (str);
+	}
 	//printf("\n\n");
 	return (0);
 }
