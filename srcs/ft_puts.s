@@ -27,6 +27,7 @@ _ft_puts:
 		mov rsi, new_line
 		mov rax, MACH_SYSCALL(WRITE)	; move WRITE syscall into return register
 		syscall							; call write syscall
+		mov rax, 10
 		ret
 
 _null:
@@ -35,4 +36,5 @@ _null:
 		mov rsi, null					; get the rbx previous saved register into rsi seccond register
 		mov rax, MACH_SYSCALL(WRITE)	; move WRITE syscall into return register
 		syscall							; call write syscall
+		mov rax, 10
 		ret
