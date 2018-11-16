@@ -6,7 +6,7 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/09 15:03:41 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/16 11:38:23 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ SRC		=	ft_bzero.s \
 			ft_tolower.s \
 			ft_puts.s \
 			ft_strlen.s \
-			ft_memset.s
+			ft_memset.s \
+			ft_memcpy.s
 
 TSRC	=	main.c
 

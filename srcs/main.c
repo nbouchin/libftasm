@@ -146,6 +146,22 @@ int main(void)
 			printf("%x\n", str[i++]);
 		free (str);
 	}
-	//printf("\n\n");
+	printf("\n\n");
+	
+	printf("MEMCPY TEST:\n");
+	{
+		char *s1;
+
+		s1 = (char *)malloc(sizeof(char) * 5);
+		s2 = (char *)malloc(sizeof(char) * 5);
+		s1 = strcpy(s1, "SALUT");
+		s2 = strcpy(s2, "CULLL");
+		s1 = ft_memcpy(s1, s2, 5);
+		i = 0;
+		while (i < 5)
+			printf("%x\n", s1[i++]);
+		free (s1);
+		free (s2);
+	}
 	return (0);
 }
