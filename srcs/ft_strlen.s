@@ -5,7 +5,7 @@ _ft_strlen:
 	mov rsi, rdi
 	mov rax, 0
 	cld
-	;;not rcx
+	not rcx
 	repne scasb 
 	dec rdi
 	sub rdi, rsi
