@@ -1,6 +1,5 @@
 section .text
 global _ft_memset
-extern _ft_strlen
 
 _ft_memset:
 		mov rcx, rdx

@@ -163,5 +163,20 @@ int main(void)
 		free (s1);
 		free (s2);
 	}
+
+
+	printf("strdup TEST:\n");
+	{
+		char *s1;
+
+		s1 = (char *)malloc(sizeof(char) * 5);
+		s2 = (char *)malloc(sizeof(char) * 5);
+		s2 = strcpy(s2, "CULLL");
+		s1 = ft_strdup(s2);
+		i = 0;
+		printf("s1 : %s | s2 : %s\n", s1, s2);
+		free (s1);
+		free (s2);
+	}
 	return (0);
 }
