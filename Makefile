@@ -6,7 +6,7 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/19 08:18:43 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/19 08:43:32 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ SRC		=	ft_bzero.s \
 			ft_strlen.s \
 			ft_memset.s \
 			ft_memcpy.s \
-			ft_strdup.s
+			ft_strdup.s \
+			ft_cat.s
 
 TEST_SRC	=	main.c
 

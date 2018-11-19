@@ -3,6 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <ctype.h>
+#include <fcntl.h>
 
 void	ft_bzero_test()
 {
@@ -282,6 +283,15 @@ void	ft_strdup_test()
 	free (s3);
 }
 
+void	ft_cat_test()
+{
+	int	fd;
+
+	fd = open("test.txt", O_RDONLY);
+	ft_cat(fd);
+	close(fd);
+}
+
 int main(void)
 {
 	ft_bzero_test();
@@ -298,6 +308,7 @@ int main(void)
 	ft_memset_test();
 	ft_memcpy_test();
 	ft_strdup_test();
+	ft_cat_test();
 	return (0);
 }
 
