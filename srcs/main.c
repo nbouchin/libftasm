@@ -285,13 +285,30 @@ void	ft_strdup_test()
 
 void	ft_cat_test()
 {
-//	int	fd;
-//
-//	fd = open("test.txt", O_RDONLY);
-//	ft_cat(fd);
-//	close(fd);
-//	ft_cat(23);
-//	ft_cat(-1);
+	int	fd;
+
+	fd = open("test.txt", O_RDONLY);
+	ft_cat(fd);
+	close(fd);
+	ft_cat(23);
+	ft_cat(-1);
+}
+
+void	ft_memcmp_test()
+{
+	char *s1;
+	char *s2;
+	s1 = (char *)malloc(sizeof(char) * 5);
+	s2 = (char *)malloc(sizeof(char) * 5);
+	s1 = strcpy(s1, "SALUP");
+	s2 = strcpy(s2, "SALUP");
+	printf("%d: %d\n", ft_memcmp(s1, s2, 5), memcmp(s1, s2, 5));
+	printf("%d: %d\n", ft_memcmp(s1, s2, 5), memcmp(s1, s2, 5));
+	if (ft_memcmp(s1, s2, 5) == memcmp(s1, s2, 5))
+		printf("ft_memcmp_test - [ok]\n");
+	else
+		printf("ft_memcmp_test - [ko]\n");
+
 }
 
 int main(void)
@@ -311,6 +328,7 @@ int main(void)
 	ft_memcpy_test();
 	ft_strdup_test();
 	ft_cat_test();
+	ft_memcmp_test();
 	return (0);
 }
 

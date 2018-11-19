@@ -7,8 +7,8 @@ extern _malloc
 _ft_strdup:
 	push rbp					; push rbp register on stack
 	mov rbp, rsp				; move rsp register on rbp register
-	sub rsp, 0x10				; align memory
-	
+	sub rsp, 0x10				; align memory	
+
 	mov [rbp - 0x8], rdi		; push rdi address on rbp - 8
 	call _ft_strlen				; get string length
 	mov [rbp - 0x10], rax		; push rax address on rbp - 16
