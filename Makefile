@@ -6,11 +6,11 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/19 08:43:32 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/19 13:07:36 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    	= 	libft_asm.a
+NAME    	= 	libfts.a
 TEST_NAME	=	test
 CC      	= 	clang
 NCC		=	nasm
