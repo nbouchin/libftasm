@@ -232,7 +232,7 @@ void	ft_memset_test()
 	s1 = ft_memset(s1, 65, 5);
 	s2 = (char *)malloc(sizeof(char) * 6);
 	s2 = strcpy(s2, "SALUT");
-	s2 = memset(s2, 5, 5);
+	s2 = memset(s2, 65, 5);
 	if (!memcmp(s1, s2, 5))
 		printf("ft_memset_test - [ok]\n");
 	else
@@ -285,13 +285,13 @@ void	ft_strdup_test()
 
 void	ft_cat_test()
 {
-	int	fd;
-
-	fd = open("test.txt", O_RDONLY);
-	ft_cat(fd);
-	close(fd);
-	ft_cat(23);
-	ft_cat(-1);
+//	int	fd;
+//
+//	fd = open("test.txt", O_RDONLY);
+//	ft_cat(fd);
+//	close(fd);
+//	ft_cat(23);
+//	ft_cat(-1);
 }
 
 int main(void)
