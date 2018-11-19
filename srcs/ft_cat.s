@@ -16,17 +16,19 @@ _ft_cat:
 	push rbp
 	mov rbp, rsp
 	sub rsp, 0x10
-	mov [rbp - 0x10], rax
+;;	push rax
+	mov [rbp - 0x10], rdi
 
 _start:
-	jc _ret
 	;; Prepare read syscall
 	mov rdi, [rbp - 0x10]
 	mov rsi, buf
 	mov rdx, BUF_SIZE 
 	mov rax, MACH_SYSCALL(READ)
 	syscall
-	mov [rbp - 0x8], rax
+	jc _ret
+	cmp rax, 0
+	je _ret
 	
 	;; Prepare write syscall
 	mov rdi, STDOUT
@@ -34,9 +36,7 @@ _start:
 	mov rdx, rax 
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
-	mov rax, [rbp - 0x8]
-	cmp rax, 0
-	jbe _ret
+	jc _ret
 	jmp _start
 
 _ret:
