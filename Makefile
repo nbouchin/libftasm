@@ -6,7 +6,7 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/19 13:07:36 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/19 14:31:12 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,9 +42,9 @@ TEST_OBJS	= $(addprefix $(OBJDIR), $(TEST_SRC:.c=.o))
 SRCS		= $(addprefix $(SRCDIR), $(SRC))
 OBJS		= $(addprefix $(OBJDIR), $(SRC:.s=.o))
 
-all: $(OBJDIR) $(NAME) test
+all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJDIR) $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 

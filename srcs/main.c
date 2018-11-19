@@ -227,9 +227,9 @@ void	ft_memset_test()
 	int		i;
 
 	i = 0;
-	s1 = (char *)malloc(sizeof(char) * 6);
+	s1 = (char *)malloc(sizeof(char) * 5);
 	s1 = strcpy(s1, "SALUT");
-	s1 = ft_memset(s1, 5, 5);
+	s1 = ft_memset(s1, 65, 5);
 	s2 = (char *)malloc(sizeof(char) * 6);
 	s2 = strcpy(s2, "SALUT");
 	s2 = memset(s2, 5, 5);
@@ -237,8 +237,8 @@ void	ft_memset_test()
 		printf("ft_memset_test - [ok]\n");
 	else
 		printf("ft_memset_test - [ko]\n");
-//	free (s1);
-//	free (s2);
+	free (s1);
+	free (s2);
 }
 
 void	ft_memcpy_test()
@@ -296,21 +296,21 @@ void	ft_cat_test()
 
 int main(void)
 {
-//	ft_bzero_test();
-//	ft_strcat_test();
-//	ft_isalpha_test();
-//	ft_isdigit_test();
-//	ft_isalnum_test();
-//	ft_isascii_test();
-//	ft_isprint_test();
-//	ft_toupper_test();
-//	ft_tolower_test();
-//	ft_strlen_test();
-//	ft_puts_test();
+	ft_bzero_test();
+	ft_strcat_test();
+	ft_isalpha_test();
+	ft_isdigit_test();
+	ft_isalnum_test();
+	ft_isascii_test();
+	ft_isprint_test();
+	ft_toupper_test();
+	ft_tolower_test();
+	ft_strlen_test();
+	ft_puts_test();
 	ft_memset_test();
-//	ft_memcpy_test();
-//	ft_strdup_test();
-//	ft_cat_test();
+	ft_memcpy_test();
+	ft_strdup_test();
+	ft_cat_test();
 	return (0);
 }
 
