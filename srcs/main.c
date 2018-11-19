@@ -288,8 +288,10 @@ void	ft_cat_test()
 	int	fd;
 
 	fd = open("test.txt", O_RDONLY);
-	ft_cat(0);
+	ft_cat(fd);
 	close(fd);
+	ft_cat(23);
+	ft_cat(-1);
 }
 
 int main(void)

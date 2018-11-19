@@ -16,7 +16,6 @@ _ft_cat:
 	push rbp
 	mov rbp, rsp
 	sub rsp, 0x10
-;;	push rax
 	mov [rbp - 0x10], rdi
 
 _start:
