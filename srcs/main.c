@@ -302,13 +302,23 @@ void	ft_memcmp_test()
 	s2 = (char *)malloc(sizeof(char) * 5);
 	s1 = strcpy(s1, "SALUP");
 	s2 = strcpy(s2, "SALUP");
-	printf("%d: %d\n", ft_memcmp(s1, s2, 5), memcmp(s1, s2, 5));
-	printf("%d: %d\n", ft_memcmp(s1, s2, 5), memcmp(s1, s2, 5));
 	if (ft_memcmp(s1, s2, 5) == memcmp(s1, s2, 5))
 		printf("ft_memcmp_test - [ok]\n");
 	else
 		printf("ft_memcmp_test - [ko]\n");
 
+}
+
+void	ft_memchr_test()
+{
+	char *s1;
+	s1 = (char *)malloc(sizeof(char) * 5);
+	s1 = strcpy(s1, "SALUP");
+	printf("%s : %s\n", ft_memchr(s1, 'I', 5), memchr(s1, 'I', 5));
+	if (ft_memchr(s1, 'L', 5) == memchr(s1, 'L', 5))
+		printf("ft_memchr_test - [ok]\n");
+	else
+		printf("ft_memchr_test - [ko]\n");
 }
 
 int main(void)
@@ -329,6 +339,7 @@ int main(void)
 	ft_strdup_test();
 	ft_cat_test();
 	ft_memcmp_test();
+	ft_memchr_test();
 	return (0);
 }
 
