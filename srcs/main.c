@@ -300,3 +300,4 @@ int main(void)
 	ft_strdup_test();
 	return (0);
 }
+

@@ -6,19 +6,19 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/16 12:42:32 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/19 08:18:43 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME    = 	libft_asm.a
-ENAME	=	test
-CC      = 	clang
+NAME    	= 	libft_asm.a
+TEST_NAME	=	test
+CC      	= 	clang
 NCC		=	nasm
-HEADER  = 	includes/
-FLAGS   = 	-Wall -Wextra -Werror
-NFLAGS	=	-f macho64
-SRCDIR  = 	srcs/
-OBJDIR  = 	objs/
+HEADER  	= 	includes/
+FLAGS   	= 	-Wall -Wextra -Werror
+NFLAGS		=	-f macho64
+SRCDIR  	= 	srcs/
+OBJDIR  	= 	objs/
 SRC		=	ft_bzero.s \
 			ft_strcat.s \
 			ft_isalpha.s \
@@ -34,11 +34,12 @@ SRC		=	ft_bzero.s \
 			ft_memcpy.s \
 			ft_strdup.s
 
-TSRC	=	main.c
+TEST_SRC	=	main.c
 
-TSRCS	= $(addprefix $(SRCDIR), $(TSRC))
-SRCS	= $(addprefix $(SRCDIR), $(SRC))
-OBJS	= $(addprefix $(OBJDIR), $(SRC:.s=.o))
+TEST_SRCS	= $(addprefix $(SRCDIR), $(TEST_SRC))
+TEST_OBJS	= $(addprefix $(OBJDIR), $(TEST_SRC:.c=.o))
+SRCS		= $(addprefix $(SRCDIR), $(SRC))
+OBJS		= $(addprefix $(OBJDIR), $(SRC:.s=.o))
 
 all: $(OBJDIR) $(NAME) test
 
@@ -52,14 +53,14 @@ $(OBJDIR):
 $(OBJDIR)%.o: $(SRCDIR)%.s $(HEADER)libft_asm.h
 	$(NCC) -o $@ $< $(NFLAGS) -I $(HEADER)
 
-test: 
-	$(CC) -o $(ENAME) $(TSRCS) $(OBJS)
+test:  $(OBJDIR) $(OBJS)
+	$(CC) -o $(TEST_NAME) $(TEST_SRCS) $(OBJS)
 
 clean:
 	rm -rf objs
 
 fclean: clean
-	rm -rf $(NAME) $(ENAME)
+	rm -rf $(NAME) $(TEST_NAME)
 
 re: fclean all
 
