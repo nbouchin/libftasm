@@ -292,6 +292,7 @@ void	ft_cat_test()
 	close(fd);
 	ft_cat(23);
 	ft_cat(-1);
+	ft_cat(0);
 }
 
 void	ft_memcmp_test()
@@ -337,9 +338,9 @@ int main(void)
 	ft_memset_test();
 	ft_memcpy_test();
 	ft_strdup_test();
-	ft_cat_test();
 	ft_memcmp_test();
 	ft_memchr_test();
+	ft_cat_test();
 	return (0);
 }
 
