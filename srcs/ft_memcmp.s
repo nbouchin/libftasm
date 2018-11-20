@@ -7,5 +7,5 @@ _ft_memcmp:
 	repe cmpsb
 	mov al, [ rdi - 1 ]
 	mov cl, [ rsi - 1 ]
-	sub al, cl
+	sub eax, ecx
 	ret
