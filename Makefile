@@ -6,7 +6,7 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/20 12:38:51 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/20 15:03:17 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ SRC		=	ft_bzero.s \
 			ft_isalpha.s \
 			ft_isdigit.s \
 			ft_isalnum.s \
+			ft_islower.s \
+			ft_isupper.s \
 			ft_isascii.s \
 			ft_isprint.s \
 			ft_toupper.s \
