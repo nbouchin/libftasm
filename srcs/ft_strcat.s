@@ -22,4 +22,5 @@ _loop2:
 	inc rdi								; increment rdi register
 	cmp byte [rsi], 0					; compare rsi with 0
 	jnz _loop2							; jump to loop2 name if rcx is not equal to 0
+	mov byte [rdi], 0
 	ret									; return program
