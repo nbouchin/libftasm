@@ -6,7 +6,7 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/19 17:21:10 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/20 12:38:51 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCDIR  	= 	srcs/
 OBJDIR  	= 	objs/
 SRC		=	ft_bzero.s \
 			ft_strcat.s \
+			ft_strncat.s \
 			ft_isalpha.s \
 			ft_isdigit.s \
 			ft_isalnum.s \

@@ -292,7 +292,7 @@ void	ft_cat_test()
 	close(fd);
 	ft_cat(23);
 	ft_cat(-1);
-	ft_cat(0);
+	//ft_cat(0);
 }
 
 void	ft_memcmp_test()
@@ -322,10 +322,38 @@ void	ft_memchr_test()
 		printf("ft_memchr_test - [ko]\n");
 }
 
+
+void	ft_strncat_test()
+{
+	char *s1;
+	char *s2;
+	char *s3;
+
+	s1 = (char *)malloc(sizeof(char) * 20);
+	s2 = (char *)malloc(sizeof(char) * 20);
+	s3 = (char *)malloc(sizeof(char) * 20);
+	bzero(s1, 20);
+	bzero(s2, 20);
+	bzero(s3, 20);
+	s1 = strcpy(s1, "This is ");
+	s3 = strcpy(s3, "This is ");
+	s2 = strcpy(s2, " a string");
+	s1 = ft_strncat(s1, s2, 3);
+	s3 = strncat(s3, s2, 3);
+	if (!memcmp(s1, s3, 20))
+		printf("ft_strncat_test - [ok]\n");
+	else
+		printf("ft_strncat_test - [ko]\n");
+	free(s1);
+	free(s2);
+	free(s3);
+}
+
 int main(void)
 {
 	ft_bzero_test();
 	ft_strcat_test();
+	ft_strncat_test();
 	ft_isalpha_test();
 	ft_isdigit_test();
 	ft_isalnum_test();
