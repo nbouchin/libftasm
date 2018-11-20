@@ -1,22 +1,14 @@
 section .text
 global _ft_isupper
-extern _ft_isalpha
 
 _ft_isupper:
-	call _ft_isalpha
-	cmp rax, 1
-	je _check_lower
-	xor rax, rax
-	ret
-
-_check_lower:
-	mov rdx, rdi
-	sub rdx, 'a'
-	cmp rdx, 26
-	jb _isupper
-	xor rax, rax
-	ret
-
-_isupper:
+	cmp rdi, 'A'	
+	jl _end
+	cmp rdi, 'Z'
+	jg _end
 	mov rax, 1
+	ret
+
+_end:
+	xor rax, rax
 	ret

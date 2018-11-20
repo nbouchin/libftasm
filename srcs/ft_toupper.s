@@ -1,19 +1,11 @@
 section .text
 global _ft_toupper
-extern _ft_isalpha
+extern _ft_islower
 
 _ft_toupper:
-	call _ft_isalpha
+	call _ft_islower
 	cmp rax, 1
-	je _check_lower
-	mov rax, rdi
-	ret
-
-_check_lower:
-	mov rdx, rdi
-	sub rdx, 'a'
-	cmp rdx, 26
-	jb _toupper
+	je _toupper
 	mov rax, rdi
 	ret
 
