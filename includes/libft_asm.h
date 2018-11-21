@@ -22,5 +22,9 @@ char	*ft_strdup(const char *s1);
 void	*ft_cat(unsigned int fd);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	ft_putstr(const char *s);
+void	ft_putstr_fd(const char *s, int fd);
+void	ft_putendl(const char *s);
+void	ft_putendl_fd(const char *s, int fd);
 
 #endif
