@@ -290,7 +290,7 @@ void	ft_cat_test()
 	fd = open("test.txt", O_RDONLY);
 	ft_cat(fd);
 	close(fd);
-	ft_cat(23);
+	ft_cat(22);
 	ft_cat(-1);
 	ft_cat(0);
 }

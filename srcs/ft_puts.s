@@ -2,11 +2,6 @@
 %define STDOUT				1
 %define WRITE				4
 
-section .data
-	null		db "(null)", 10
-	len			equ $ - null
-	new_line	db 10
-
 section .text
 global _ft_puts
 extern _ft_strlen
@@ -24,7 +19,7 @@ _ft_puts:
 	syscall							; call write syscall
 	mov rdi, STDOUT
 	mov rdx, 1
-	mov rsi, new_line
+	lea rsi, [rel null + 6]
 	mov rax, MACH_SYSCALL(WRITE)	; move WRITE syscall into return register
 	syscall							; call write syscall
 	mov rax, 10
@@ -32,9 +27,12 @@ _ft_puts:
 
 _null:
 	mov rdi, STDOUT					; put STDOUT define into third register
-	mov rdx, len					; put ft_strlen ret in rdx third parameter register
-	mov rsi, null					; get the rbx previous saved register into rsi seccond register
+	mov rdx, 6						; put ft_strlen ret in rdx third parameter register
+	lea rsi, [rel null]				; get the rbx previous saved register into rsi seccond register
 	mov rax, MACH_SYSCALL(WRITE)	; move WRITE syscall into return register
 	syscall							; call write syscall
 	mov rax, 10
 	ret
+
+section .rodata
+	null		db "(null)", 10
