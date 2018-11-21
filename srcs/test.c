@@ -159,7 +159,7 @@ void	ft_toupper_test()
 
 	i = 0;
 	ok = 1;
-	while (i++ < 127)
+	while (i++ < 200)
 	{
 		if (ft_toupper(i) != toupper(i))
 		{
@@ -179,7 +179,7 @@ void	ft_tolower_test()
 
 	i = 0;
 	ok = 1;
-	while (i++ < 127)
+	while (i++ < 200)
 	{
 		if (ft_tolower(i) != tolower(i))
 		{
@@ -231,7 +231,7 @@ void	ft_memset_test()
 	s1 = strcpy(s1, "SALUT");
 	s1 = ft_memset(s1, 65, 5);
 	s2 = (char *)malloc(sizeof(char) * 6);
-	s2 = strcpy(s2, "SALUT");
+	s2 = strcpy(s2, "SALUP");
 	s2 = memset(s2, 65, 5);
 	if (!memcmp(s1, s2, 5))
 		printf("ft_memset_test - [ok]\n");
@@ -371,4 +371,3 @@ int main(void)
 //	ft_cat_test();
 	return (0);
 }
-

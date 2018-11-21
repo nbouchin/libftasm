@@ -6,7 +6,7 @@
 #    By: nbouchin <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/27 13:56:26 by nbouchin          #+#    #+#              #
-#    Updated: 2018/11/20 15:03:17 by nbouchin         ###   ########.fr        #
+#    Updated: 2018/11/21 09:02:34 by nbouchin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRC		=	ft_bzero.s \
 			ft_memcmp.s \
 			ft_memchr.s
 
-TEST_SRC	=	main.c
+TEST_SRC	=	test.c
 
 TEST_SRCS	= $(addprefix $(SRCDIR), $(TEST_SRC))
 TEST_OBJS	= $(addprefix $(OBJDIR), $(TEST_SRC:.c=.o))

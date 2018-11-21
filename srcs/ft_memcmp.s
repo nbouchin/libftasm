@@ -5,7 +5,12 @@ _ft_memcmp:
 	xor rax, rax
 	mov rcx, rdx
 	repe cmpsb
-	mov al, [ rdi - 1 ]
-	mov cl, [ rsi - 1 ]
+	movzx eax, byte [ rdi - 1 ]
+	movzx ecx, byte [ rsi - 1 ]
 	sub eax, ecx
+	cmp eax, 127
+	jng _ret
+	mov eax, -1
+
+_ret:
 	ret
